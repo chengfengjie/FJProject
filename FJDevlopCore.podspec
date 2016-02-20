@@ -33,6 +33,14 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/chengfengjie"
+  
+  s.ios.deployment_target = '7.0'
+  
+  s.subspec 'UI' do |ss|
+    ss.source_files = 'FJDevelopCore/FJBaseView.{h,m}'
+    ss.ios.frameworks = 'UIKit'
+  end
+  
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
