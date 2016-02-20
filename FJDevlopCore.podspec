@@ -40,6 +40,12 @@ Pod::Spec.new do |s|
     ss.source_files = 'FJDevelopCore/UI/FJBaseView.{h,m}'
     ss.public_header_files = 'FJDevelopCore/UI/FJBaseView.h'
     ss.ios.frameworks = 'UIKit'
+    
+    ss.subspec 'Extend' do |sss|
+      sss.source_files = 'FJDevelopCore/UI/Extend/UIView+FJExtend.{h,m}'
+      sss.public_header_files = 'FJDevelopCore/UI/Extend/UIView+FJExtend.h'
+    end
+    
   end
   
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
