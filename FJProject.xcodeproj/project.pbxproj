@@ -16,6 +16,8 @@
 		5C7D25691C784AD20084C9F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7D25671C784AD20084C9F1 /* LaunchScreen.storyboard */; };
 		5C7D25741C784AD20084C9F1 /* FJProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7D25731C784AD20084C9F1 /* FJProjectTests.m */; };
 		5C7D257F1C784AD20084C9F1 /* FJProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7D257E1C784AD20084C9F1 /* FJProjectUITests.m */; };
+		5C7D25DD1C785C310084C9F1 /* UIView+FJExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7D25DC1C785C310084C9F1 /* UIView+FJExtend.m */; };
+		5C7D25E01C785C420084C9F1 /* FJBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7D25DF1C785C420084C9F1 /* FJBaseView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,11 @@
 		5C7D257A1C784AD20084C9F1 /* FJProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FJProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7D257E1C784AD20084C9F1 /* FJProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FJProjectUITests.m; sourceTree = "<group>"; };
 		5C7D25801C784AD20084C9F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C7D25CF1C785A800084C9F1 /* FJDevelopCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FJDevelopCore.h; sourceTree = "<group>"; };
+		5C7D25DB1C785C310084C9F1 /* UIView+FJExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FJExtend.h"; sourceTree = "<group>"; };
+		5C7D25DC1C785C310084C9F1 /* UIView+FJExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FJExtend.m"; sourceTree = "<group>"; };
+		5C7D25DE1C785C420084C9F1 /* FJBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJBaseView.h; sourceTree = "<group>"; };
+		5C7D25DF1C785C420084C9F1 /* FJBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJBaseView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +90,7 @@
 		5C7D254A1C784AD20084C9F1 = {
 			isa = PBXGroup;
 			children = (
+				5C7D25CE1C785A640084C9F1 /* FJDevelopCore */,
 				5C7D25551C784AD20084C9F1 /* FJProject */,
 				5C7D25721C784AD20084C9F1 /* FJProjectTests */,
 				5C7D257D1C784AD20084C9F1 /* FJProjectUITests */,
@@ -141,6 +149,82 @@
 				5C7D25801C784AD20084C9F1 /* Info.plist */,
 			);
 			path = FJProjectUITests;
+			sourceTree = "<group>";
+		};
+		5C7D25CE1C785A640084C9F1 /* FJDevelopCore */ = {
+			isa = PBXGroup;
+			children = (
+				5C7D25CF1C785A800084C9F1 /* FJDevelopCore.h */,
+				5C7D25D01C785B790084C9F1 /* Core */,
+				5C7D25D11C785B790084C9F1 /* Data */,
+				5C7D25D21C785B790084C9F1 /* Logic */,
+				5C7D25D31C785B790084C9F1 /* Model */,
+				5C7D25D41C785B790084C9F1 /* Net */,
+				5C7D25D51C785B790084C9F1 /* Runtime */,
+				5C7D25D61C785B790084C9F1 /* UI */,
+			);
+			path = FJDevelopCore;
+			sourceTree = "<group>";
+		};
+		5C7D25D01C785B790084C9F1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5C7D25D11C785B790084C9F1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5C7D25D21C785B790084C9F1 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		5C7D25D31C785B790084C9F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5C7D25D41C785B790084C9F1 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		5C7D25D51C785B790084C9F1 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
+		5C7D25D61C785B790084C9F1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5C7D25D71C785BB10084C9F1 /* Extend */,
+				5C7D25DE1C785C420084C9F1 /* FJBaseView.h */,
+				5C7D25DF1C785C420084C9F1 /* FJBaseView.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5C7D25D71C785BB10084C9F1 /* Extend */ = {
+			isa = PBXGroup;
+			children = (
+				5C7D25DB1C785C310084C9F1 /* UIView+FJExtend.h */,
+				5C7D25DC1C785C310084C9F1 /* UIView+FJExtend.m */,
+			);
+			path = Extend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +357,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7D25DD1C785C310084C9F1 /* UIView+FJExtend.m in Sources */,
+				5C7D25E01C785C420084C9F1 /* FJBaseView.m in Sources */,
 				5C7D255E1C784AD20084C9F1 /* ViewController.m in Sources */,
 				5C7D25641C784AD20084C9F1 /* FJProject.xcdatamodeld in Sources */,
 				5C7D255B1C784AD20084C9F1 /* AppDelegate.m in Sources */,
@@ -500,6 +586,7 @@
 				5C7D25851C784AD20084C9F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C7D25861C784AD20084C9F1 /* Build configuration list for PBXNativeTarget "FJProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +595,7 @@
 				5C7D25881C784AD20084C9F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C7D25891C784AD20084C9F1 /* Build configuration list for PBXNativeTarget "FJProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +604,7 @@
 				5C7D258B1C784AD20084C9F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
