@@ -18,6 +18,10 @@ Pod::Spec.new do |s|
   s.name         = "FJDevlopCore"
   s.version      = "0.0.1"
   s.summary      = "A short description of FJDevlopCore."
+  s.requires_arc = true
+  
+  s.public_header_files = 'FJDevelopCore/FJDevelopCore.h'
+  s.source_files = 'FJDevelopCore/FJDevelopCore.h'
 
   s.description  = <<-DESC
                    A longer description of FJDevlopCore in Markdown format.
@@ -79,7 +83,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/chengfengjie/FJProject.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/chengfengjie/FJProject.git", :tag => s.version,:submodules => true }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
