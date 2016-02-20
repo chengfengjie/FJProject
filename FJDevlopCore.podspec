@@ -37,7 +37,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
   
   s.subspec 'UI' do |ss|
-    ss.source_files = 'FJDevelopCore/FJBaseView.{h,m}'
+    ss.source_files = 'FJDevelopCore/UI/FJBaseView.{h,m}'
+    ss.public_header_files = 'FJDevelopCore/UI/FJBaseView.h'
     ss.ios.frameworks = 'UIKit'
   end
   
