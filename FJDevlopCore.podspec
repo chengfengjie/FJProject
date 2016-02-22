@@ -18,6 +18,10 @@ Pod::Spec.new do |s|
   s.name         = "FJDevlopCore"
   s.version      = "0.0.1"
   s.summary      = "A short description of FJDevlopCore."
+  s.requires_arc = true
+  
+  s.public_header_files = 'FJDevelopCore/FJDevelopCore.h'
+  s.source_files = 'FJDevelopCore/FJDevelopCore.h'
 
   s.description  = <<-DESC
                    A longer description of FJDevlopCore in Markdown format.
@@ -29,6 +33,21 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/chengfengjie"
+  
+  s.ios.deployment_target = '7.0'
+  
+  s.subspec 'UI' do |ss|
+    ss.source_files = 'FJDevelopCore/UI/FJBaseView.{h,m}'
+    ss.public_header_files = 'FJDevelopCore/UI/FJBaseView.h'
+    ss.ios.frameworks = 'UIKit'
+    
+    ss.subspec 'Extend' do |sss|
+      sss.source_files = 'FJDevelopCore/UI/Extend/UIView+FJExtend.{h,m}'
+      sss.public_header_files = 'FJDevelopCore/UI/Extend/UIView+FJExtend.h'
+    end
+    
+  end
+  
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -79,7 +98,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/chengfengjie/FJProject.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/chengfengjie/FJProject.git", :tag => s.version,:submodules => true }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +109,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  #  s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  #  s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
