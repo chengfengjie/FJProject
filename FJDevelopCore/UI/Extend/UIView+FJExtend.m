@@ -7,7 +7,13 @@
 //
 
 #import "UIView+FJExtend.h"
+#import <objc/runtime.h>
 
 @implementation UIView (FJExtend)
-
+- (CGFloat)width {
+    return CGRectGetWidth(self.frame);
+}
+- (CGFloat)height {
+    return CGRectGetHeight(self.frame);
+}
 @end

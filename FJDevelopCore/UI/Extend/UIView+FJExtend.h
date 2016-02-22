@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (FJExtend)
-
+@property (nonatomic,assign,readonly) CGFloat width;//视图的宽度
+@property (nonatomic,assign,readonly) CGFloat height;//视图的高度
 @end
